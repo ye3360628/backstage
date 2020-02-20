@@ -1,0 +1,39 @@
+SET NAMES UTF8;
+DROP DATABASE IF EXISTS ly;
+CREATE DATABASE ly CHARSET=UTF8;
+USE ly;
+/**用户信息**/
+DROP TABLE IF EXISTS ly_user;
+CREATE TABLE ly_user(
+  `id`  INT PRIMARY KEY AUTO_INCREMENT,
+  uname VARCHAR(32),
+  upwd VARCHAR(32)
+);
+/**用户信息**/
+INSERT INTO ly_user VALUES
+( null,'dingding', '123456'),
+( null,'dangdang', '123456'),
+( null,'doudou', '123456'),
+( null,'yaya', '123456');
+
+DROP TABLE IF EXISTS ly_findweek;
+CREATE TABLE ly_findweek(
+   lid  INT PRIMARY KEY AUTO_INCREMENT,
+  title varchar(64) DEFAULT NULL,
+  pic varchar(128) DEFAULT NULL,
+  href varchar(128) DEFAULT NULL
+) 
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 插入之前先把表清空（truncate） `ly_findweek`
+--
+
+INSERT INTO ly_findweek (lid,title,pic,href) VALUES
+(null, '游心旅行：【寻找毕加索】西班牙10天9晚（古埃尔公园+毕加索博物馆+索菲娅国家艺术中心）','https://s2.ax1x.com/2020/01/16/lxFia4.jpg', 'index.html?lid=1'),
+(null, '游心旅行：游心旅行：“感冻自己”游心带您开启【赴美冻卵】之旅 14天往返  加州生殖中心FSAC•全程四星凯悦酒店 •旅游期间用车洛杉矶定制游','https://s2.ax1x.com/2020/01/16/lxixx0.jpg', 'index.html?lid=2'),
+(null, '游心旅行：【探寻宫崎骏的奇幻世界】日本九州8天7晚亲子游（汤布院温泉+白谷云水峡+指宿沙蒸）+会安古城6天4晚）','https://s2.ax1x.com/2020/01/16/lxF9qU.jpg', 'index.html?lid=3'),
+
+
+
+
